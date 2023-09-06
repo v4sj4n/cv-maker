@@ -9,9 +9,10 @@ export default function Bio() {
       {bio.map((item) => {
         if (item[2] !== 'description') {
           return (
-            <label htmlFor={`maker-bio-${item[2]}`}>
+            <label key={item[2]} htmlFor={`maker-bio-${item[2]}`}>
               {item[3]}
               <input
+                className="maker-bio-input"
                 type="text"
                 onChange={(e) => item[1](e.target.value)}
                 placeholder={item[0]}
@@ -20,9 +21,10 @@ export default function Bio() {
           )
         } else {
           return (
-            <label htmlFor={`maker-bio-${item[2]}`}>
+            <label key={item[2]} htmlFor={`maker-bio-${item[2]}`}>
               {item[3]}
               <textarea
+                className="maker-bio-input"
                 type="text"
                 onChange={(e) => item[1](e.target.value)}
                 placeholder={item[0]}

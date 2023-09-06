@@ -4,7 +4,6 @@ import { useContext } from 'react'
 
 export default function Preview() {
   const { bio } = useContext(UserContext)
-  console.log(bio)
   return (
     <div id="preview-container">
       <div id="preview-bio">
@@ -14,7 +13,7 @@ export default function Preview() {
         <h3>{bio[5][0]}</h3>
         <p>{bio[2][0]}</p>
         <p>
-          <span>{bio[3][0]}</span> *** <span>{bio[4][0]}</span>
+          <span>{bio[3][0]}</span> | <span>{bio[4][0]}</span>
         </p>
         <p>{bio[6][0]}</p>
       </div>

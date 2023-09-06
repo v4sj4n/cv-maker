@@ -1,6 +1,29 @@
 #maker-conatainer {
   background-color: #464444;
   color: #fff;
-  height: 100vh;
+  height: 200vh;
   padding: 1rem;
+  padding: 1rem 3rem;
+}
+
+.maker-category {
+  margin-bottom: 0.75rem;
+  grid-column: span 2;
+}
+
+input,
+textarea {
+  background-color: rgb(20, 18, 15);
+  color: white;
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+input:focus,
+textarea:focus {
+  /* border: 1px solid green; */
+  outline: 1px solid rgb(83, 225, 83);
 }
