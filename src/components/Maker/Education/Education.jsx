@@ -30,7 +30,6 @@ export default function Education() {
                   </p>
                 </div>
                 <div>
-                  <button>Edit</button>
                   <button
                     onClick={() => {
                       setEducations((current) =>
