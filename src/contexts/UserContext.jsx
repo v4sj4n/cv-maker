@@ -12,7 +12,7 @@ export function UserProvider({ children }) {
   const [phone, setPhone] = useState('+1-800-BATMAN')
   const [email, setEmail] = useState('bruce@wayne.inc')
   const [occupation, setOccupation] = useState('Batman')
-  const [description, setDescription] = useState(
+  const [bio, setBio] = useState(
     'I am a superhero protector of Gotham City, dressed as a bat and fighting against evil.'
   )
 
@@ -25,7 +25,7 @@ export function UserProvider({ children }) {
       city: 'Gotham, New Jersey',
       country: 'USA',
       startDate: 'October 2nd, 1957',
-      endDate: 'July 4th 1961',
+      endDate: 'July 4th, 1961',
     },
   ])
 
@@ -36,6 +36,24 @@ export function UserProvider({ children }) {
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
 
+  // Professional
+  const [professionalExperiences, setProfessionalExperiences] = useState([
+    {
+      uuid: v4(),
+      jobTitle: 'Batman',
+      company: 'nonProfit/Community',
+      startDate: 'July 4th, 1961',
+      endDate: '',
+      description:
+        "Me Batman, also known as the Dark Knight, is an iconic vigilante from the DC Universe. Clad in a sleek bat-inspired suit and armed with unparalleled detective skills, he prowls the crime-ridden streets of Gotham City. Driven by a tragic past, Batman fights for justice without superpowers, relying on his intellect, gadgets, and indomitable will. This enigmatic hero embodies the enduring human spirit's ability to rise above adversity and inspire hope in the darkest of times.",
+    },
+  ])
+  const [jobTitle, setJobTitle] = useState('')
+  const [company, setCompany] = useState('')
+  const [jobStartDate, setJobStartDate] = useState('')
+  const [jobEndDate, setJobEndDate] = useState('')
+  const [jobDescription, setJobDescription] = useState('')
+
   const bigObj = {
     bio: [
       [firstName, setFirstName, 'firstname', 'First Name'],
@@ -44,7 +62,7 @@ export function UserProvider({ children }) {
       [email, setEmail, 'email', 'Email'],
       [phone, setPhone, 'phone', 'Phone'],
       [occupation, setOccupation, 'occupation', 'Occupation'],
-      [description, setDescription, 'description', 'Description'],
+      [bio, setBio, 'bio', 'Bio'],
     ],
     educational: {
       educationList: {
@@ -66,11 +84,33 @@ export function UserProvider({ children }) {
         [endDate, setEndDate, 'End Date', 'endDate'],
       ],
     },
-    professional: [],
+    professional: {
+      profExperiencesList: {
+        professionalExperiences,
+        setProfessionalExperiences,
+      },
+      professionalItem: [
+        [jobTitle, setJobTitle, 'Batman', 'Job Title', 'jobTitle'],
+        [company, setCompany, 'nonProfit/Community', 'Company', 'company'],
+        [jobStartDate, setJobStartDate, 'Job Start Date', 'jobStartDate'],
+        [jobEndDate, setJobEndDate, 'Job End Date', 'jobEndDate'],
+        [
+          jobDescription,
+          setJobDescription,
+          "Me Batman, also known as the Dark Knight, is an iconic vigilante from the DC Universe. Clad in a sleek bat-inspired suit and armed with unparalleled detective skills, he prowls the crime-ridden streets of Gotham City. Driven by a tragic past, Batman fights for justice without superpowers, relying on his intellect, gadgets, and indomitable will. This enigmatic hero embodies the enduring human spirit's ability to rise above adversity and inspire hope in the darkest of times.",
+          'Job Description',
+          'jobDescription',
+        ],
+      ],
+    },
   }
   return (
     <UserContext.Provider
-      value={{ bio: bigObj.bio, educational: bigObj.educational }}
+      value={{
+        bio: bigObj.bio,
+        educational: bigObj.educational,
+        professional: bigObj.professional,
+      }}
     >
       {children}
     </UserContext.Provider>

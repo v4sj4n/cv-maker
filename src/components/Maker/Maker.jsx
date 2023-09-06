@@ -1,6 +1,7 @@
 import './Maker.css'
 import Bio from './Bio/Bio'
 import Education from './Education/Education'
+import Profession from './Profession/Profession'
 
 export default function Maker() {
   return (
@@ -8,6 +9,8 @@ export default function Maker() {
       <Bio />
       <hr />
       <Education />
+      <hr />
+      <Profession />
     </div>
   )
 }

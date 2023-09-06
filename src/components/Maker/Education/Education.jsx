@@ -79,10 +79,7 @@ export default function Education() {
             e.preventDefault()
             let areAllFilled = 0
             educationItem.forEach((element) => {
-              if (element[0] === '') {
-                alert('Please fill all the values with appropriate values')
-                return
-              } else {
+              if (element[0] !== '') {
                 areAllFilled++
               }
             })
@@ -103,6 +100,7 @@ export default function Education() {
                 .querySelectorAll('.maker-education-input')
                 .forEach((el) => (el.value = ''))
             } else {
+              alert('Please fill all the values with appropriate values')
               areAllFilled = 0
             }
           }}

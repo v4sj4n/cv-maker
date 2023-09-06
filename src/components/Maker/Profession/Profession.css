@@ -1,0 +1,36 @@
+#maker-profession-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.5rem;
+  column-gap: 1rem;
+
+  & label {
+    color: #efefef;
+  }
+
+  & button {
+    grid-column: span 2;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(20, 18, 15);
+    border: none;
+    color: white;
+  }
+  & button:hover {
+    cursor: pointer;
+    background-color: rgb(59, 57, 53);
+  }
+}
+
+#profession-list {
+  & .profession {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+label[for='maker-professional-jobDescription'] {
+  grid-column: span 2;
+}

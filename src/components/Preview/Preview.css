@@ -1,18 +1,25 @@
 #preview-container {
   margin: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 2rem 2rem 1rem;
+  padding: 4rem;
   & * {
     text-align: center;
   }
   & #preview-bio {
     & * {
       margin: 0;
+      text-wrap: balance;
     }
   }
   & #preview-education {
     & #education-list .education-element * {
       margin: 0;
+    }
+  }
+  & #preview-profession {
+    & #profession-list .profession-element * {
+      margin: 0;
+      text-wrap: balance;
     }
   }
 }

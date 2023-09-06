@@ -3,8 +3,9 @@ import UserContext from '../../contexts/UserContext'
 import { useContext } from 'react'
 
 export default function Preview() {
-  const { bio, educational } = useContext(UserContext)
+  const { bio, educational, professional } = useContext(UserContext)
   const { educations } = educational.educationList
+  const { professionalExperiences } = professional.profExperiencesList
   return (
     <div id="preview-container">
       <div id="preview-bio">
@@ -24,7 +25,7 @@ export default function Preview() {
         <div id="education-list">
           {educations.map((education) => {
             return (
-              <div className="education-element">
+              <div key={education.uuid} className="education-element">
                 <h3>
                   <span style={{ textTransform: 'uppercase' }}>
                     {education.fieldOfStudy}
@@ -43,6 +44,35 @@ export default function Preview() {
                   <span>{education.startDate}</span> <strong>x</strong>
                   <span> {education.endDate}</span>
                 </h4>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+      <div id="preview-profession">
+        <h1>Professions</h1>
+        <div id="profession-list">
+          {professionalExperiences.map((profession) => {
+            return (
+              <div key={profession.uuid} className="profession-element">
+                <h3>
+                  <span style={{ textTransform: 'uppercase' }}>
+                    {profession.jobTitle}
+                  </span>
+                  -
+                  <span style={{ fontWeight: '400' }}>
+                    {profession.company}
+                  </span>
+                </h3>
+
+                <h4 style={{ fontWeight: '400' }}>
+                  <span>{profession.startDate}</span> <strong>x</strong>
+                  <span>
+                    {' '}
+                    {profession.endDate ? profession.endDate : 'now'}
+                  </span>
+                </h4>
+                <p>{profession.description}</p>
               </div>
             )
           })}

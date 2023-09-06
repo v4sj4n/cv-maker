@@ -10,6 +10,6 @@
 
 label[for='maker-bio-location'],
 label[for='maker-bio-occupation'],
-label[for='maker-bio-description'] {
+label[for='maker-bio-bio'] {
   grid-column: span 2;
 }
