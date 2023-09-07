@@ -27,3 +27,23 @@ textarea:focus {
   /* border: 1px solid green; */
   outline: 1px solid rgb(83, 225, 83);
 }
+
+#save-pdf {
+  display: flex;
+  justify-content: space-between;
+  > button {
+    color: #464444;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  > button:hover {
+    border: solid 1px #fff;
+
+    color: white;
+    background-color: inherit;
+
+    cursor: pointer;
+  }
+}

@@ -25,9 +25,23 @@
 
 #profession-list {
   & .profession {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    & button {
+      border: solid 1px #fff;
+      color: white;
+      padding: 1rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      background-color: inherit;
+    }
+    & button:hover {
+      color: #464444;
+      background-color: white;
+      cursor: pointer;
+    }
   }
 }
 

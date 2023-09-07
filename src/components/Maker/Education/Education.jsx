@@ -29,17 +29,15 @@ export default function Education() {
                     <span>{item.startDate}</span>-<span>{item.endDate}</span>
                   </p>
                 </div>
-                <div>
-                  <button
-                    onClick={() => {
-                      setEducations((current) =>
-                        current.filter((el) => el.uuid !== item.uuid)
-                      )
-                    }}
-                  >
-                    Delete
-                  </button>
-                </div>
+                <button
+                  onClick={() => {
+                    setEducations((current) =>
+                      current.filter((el) => el.uuid !== item.uuid)
+                    )
+                  }}
+                >
+                  Delete
+                </button>
               </div>
             )
           })}
