@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+	<title>New Project</title>
+	<defs>
+		<image  width="300" height="300" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAAXNSR0IB2cksfwAAAANQTFRF09PTnXqjAQAAACJJREFUeJztwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAHgZLbQAAWZ0M2QAAAAASUVORK5CYII="/>
+		<image width="336" height="336" id="img2" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEzLDlIMTguNUwxMywzLjVWOU02LDJIMTRMMjAsOFYyMEEyLDIgMCAwLDEgMTgsMjJINkM0Ljg5LDIyIDQsMjEuMSA0LDIwVjRDNCwyLjg5IDQuODksMiA2LDJNMTQsMjBWMTlDMTQsMTcuNjcgMTEuMzMsMTcgMTAsMTdDOC42NywxNyA2LDE3LjY3IDYsMTlWMjBIMTRNMTAsMTJBMiwyIDAgMCwwIDgsMTRBMiwyIDAgMCwwIDEwLDE2QTIsMiAwIDAsMCAxMiwxNEEyLDIgMCAwLDAgMTAsMTJaIiAvPjwvc3ZnPg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+	<use id="file-account" href="#img2" transform="matrix(.937,0,0,.937,-7.353,-7.353)"/>
+</svg>
